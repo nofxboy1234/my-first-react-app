@@ -6,6 +6,7 @@ import { MacaroniCheese, FriedEggs } from './Food.jsx';
 import MultiElement from './MultiElement.jsx';
 import './index.css';
 import TodoList from './TodoList.jsx';
+import Bio from './Bio.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -15,5 +16,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <FriedEggs />
     <MultiElement />
     <TodoList />
+    <Bio />
   </React.StrictMode>
 );
