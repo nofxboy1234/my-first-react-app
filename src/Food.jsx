@@ -1,7 +1,7 @@
 function MacaroniCheese() {
   return (
     <img
-      src="/src/assets/macaroni.jpg"
+      src="src/assets/macaroni.jpg"
       width="300px"
       alt="Delicious Macaroni Cheese"
     />
