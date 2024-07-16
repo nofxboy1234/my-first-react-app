@@ -1,11 +1,21 @@
 function MacaroniCheese() {
   return (
-    <img
-      src="src/assets/macaroni.jpg"
-      width="300px"
-      alt="Delicious Macaroni Cheese"
-    />
+    <div>
+      <img
+        src="src/assets/macaroni.jpg"
+        width="300px"
+        alt="Delicious Macaroni Cheese"
+      />
+    </div>
   );
 }
 
-export default MacaroniCheese;
+function FriedEggs() {
+  return (
+    <div>
+      <img src="src/assets/fried-eggs.jpg" width="300px" alt="Fried Eggs!" />
+    </div>
+  );
+}
+
+export { MacaroniCheese, FriedEggs };
