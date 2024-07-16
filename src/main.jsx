@@ -7,6 +7,7 @@ import MultiElement from './MultiElement.jsx';
 import './index.css';
 import TodoList from './TodoList.jsx';
 import Bio from './Bio.jsx';
+import Avatar from './Avatar.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -17,5 +18,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <MultiElement />
     <TodoList />
     <Bio />
+    <Avatar />
   </React.StrictMode>
 );
