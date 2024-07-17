@@ -1,5 +1,6 @@
 function ListItem(props) {
-  return <li>{props.animal}</li>;
+  const animal = props.animal;
+  return animal.startsWith('L') ? <li>{animal}</li> : null;
 }
 
 function List(props) {
