@@ -10,6 +10,7 @@ import Bio from './Bio.jsx';
 import Avatar from './Avatar.jsx';
 import ScientistTodoList from './ScientistTodoList.jsx';
 import DateTodoList from './DateTodoList.jsx';
+import Challenge1 from './Challenge1.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -23,5 +24,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Avatar />
     <ScientistTodoList />
     <DateTodoList />
+    <Challenge1 />
   </React.StrictMode>
 );
