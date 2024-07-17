@@ -15,11 +15,16 @@ import Challenge3 from './Challenge3.jsx';
 import AnimalsList from './AnimalsList.jsx';
 import { AnimalApp } from './AnimalComponents.jsx';
 import PackingList from './PackingList.jsx';
+import Challenge1PackingList from './conditionalRendering/Challenge1.jsx';
+import Challenge2PackingList from './conditionalRendering/Challenge2.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <Challenge2PackingList />
+    {/* <Challenge1PackingList /> */}
+
     {/* <App /> */}
-    <PackingList />
+    {/* <PackingList /> */}
 
     {/* <AnimalsList /> */}
     {/* <AnimalApp /> */}
