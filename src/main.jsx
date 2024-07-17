@@ -12,11 +12,14 @@ import ScientistTodoList from './ScientistTodoList.jsx';
 import DateTodoList from './DateTodoList.jsx';
 import Challenge1 from './Challenge1.jsx';
 import Challenge3 from './Challenge3.jsx';
+import AnimalsList from './AnimalsList.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-    <Hello />
+    <AnimalsList />
+
+    {/* <Hello />
     <MacaroniCheese />
     <FriedEggs />
     <MultiElement />
@@ -26,6 +29,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <ScientistTodoList />
     <DateTodoList />
     <Challenge1 />
-    <Challenge3 />
+    <Challenge3 /> */}
   </React.StrictMode>
 );
