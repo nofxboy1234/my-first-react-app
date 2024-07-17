@@ -12,7 +12,7 @@ function List(props) {
   );
 }
 
-function App() {
+function AnimalApp() {
   const animals = ['Lion', 'Cow', 'Snake', 'Lizard'];
 
   return (
@@ -23,4 +23,4 @@ function App() {
   );
 }
 
-export { ListItem, List, App };
+export { ListItem, List, AnimalApp };

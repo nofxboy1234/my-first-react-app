@@ -13,11 +13,13 @@ import DateTodoList from './DateTodoList.jsx';
 import Challenge1 from './Challenge1.jsx';
 import Challenge3 from './Challenge3.jsx';
 import AnimalsList from './AnimalsList.jsx';
+import { AnimalApp } from './AnimalComponents.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-    <AnimalsList />
+    {/* <AnimalsList /> */}
+    <AnimalApp />
 
     {/* <Hello />
     <MacaroniCheese />
