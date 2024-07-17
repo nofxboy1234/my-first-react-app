@@ -1,6 +1,7 @@
 function ListItem(props) {
   const animal = props.animal;
-  return animal.startsWith('L') ? <li>{animal}</li> : null;
+  return animal.startsWith('L') && <li>{animal}</li>;
+  // return animal.startsWith('L') ? <li>{animal}</li> : null;
 }
 
 function List(props) {
