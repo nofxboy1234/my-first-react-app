@@ -5,6 +5,14 @@ function ListItem(props) {
 }
 
 function List(props) {
+  if (!props.animals) {
+    return <div>Loading...</div>;
+  }
+
+  if (props.animals.length === 0) {
+    return <div>There are no animals in the list!</div>;
+  }
+
   return (
     <>
       <div>Owner: {props.person.name}</div>
@@ -18,7 +26,7 @@ function List(props) {
 }
 
 function AnimalApp() {
-  const animals = ['Lion', 'Cow', 'Snake', 'Lizard'];
+  const animals = [];
   const anotherTheme = { color: 'pink' };
 
   return (
