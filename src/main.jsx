@@ -8,6 +8,7 @@ import './index.css';
 import TodoList from './TodoList.jsx';
 import Bio from './Bio.jsx';
 import Avatar from './Avatar.jsx';
+import ScientistTodoList from './ScientistTodoList.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -19,5 +20,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <TodoList />
     <Bio />
     <Avatar />
+    <ScientistTodoList />
   </React.StrictMode>
 );
