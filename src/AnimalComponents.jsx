@@ -26,7 +26,8 @@ function List(props) {
 }
 
 function AnimalApp() {
-  const animals = [];
+  const animals = ['Lion', 'Cow', 'Snake', 'Lizard'];
+  // const animals = [];
   const anotherTheme = { color: 'pink' };
 
   return (
