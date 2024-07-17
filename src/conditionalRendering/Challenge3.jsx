@@ -7,7 +7,7 @@ function Drink({ name }) {
     partOfPlant = 'leaf';
     caffeineContent = '15-70 mg/cup';
     age = '4,000+ years';
-  } else {
+  } else if (name === 'coffee') {
     partOfPlant = 'bean';
     caffeineContent = '80-185 mg/cup';
     age = '1,000+ years';
