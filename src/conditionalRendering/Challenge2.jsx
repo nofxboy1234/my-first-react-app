@@ -4,6 +4,7 @@ function Item({ name, importance }) {
       {name}
       {importance > 0 && ' '}
       {importance > 0 && <i>(Importance: {importance})</i>}
+      {/* {name} {importance > 0 && '(Importance: ' + importance + ')'} */}
       {/* {name} {importance > 0 && `(Importance: ${importance})`} */}
     </li>
   );
