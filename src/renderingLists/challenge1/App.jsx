@@ -1,9 +1,9 @@
 import { people } from './data.js';
 import { getImageUrl } from './utils.js';
 
-function personListItem(person) {
+function PersonListItem({ person }) {
   return (
-    <li key={person.id}>
+    <li>
       <img src={getImageUrl(person)} alt={person.name} />
       <p>
         <b>{person.name}:</b>
@@ -17,11 +17,11 @@ function personListItem(person) {
 export default function List() {
   const chemists = people
     .filter((person) => person.profession === 'chemist')
-    .map((person) => personListItem(person));
+    .map((person) => <PersonListItem key={person.id} person={person} />);
 
   const everyoneElse = people
     .filter((person) => person.profession !== 'chemist')
-    .map((person) => personListItem(person));
+    .map((person) => <PersonListItem key={person.id} person={person} />);
 
   return (
     <article>
