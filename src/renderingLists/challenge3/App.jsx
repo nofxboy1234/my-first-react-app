@@ -18,12 +18,7 @@ export default function RecipeList() {
     <div>
       <h1>Recipes</h1>
       {recipes.map((recipe) => (
-        <Recipe
-          key={recipe.id}
-          id={recipe.id}
-          name={recipe.name}
-          ingredients={recipe.ingredients}
-        />
+        <Recipe key={recipe.id} {...recipe} />
       ))}
     </div>
   );
