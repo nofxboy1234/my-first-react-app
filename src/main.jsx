@@ -19,11 +19,13 @@ import './index.css';
 // import Challenge2PackingList from './conditionalRendering/Challenge2.jsx';
 // import Challenge3DrinkList from './conditionalRendering/Challenge3.jsx';
 // import PeopleList from './renderingLists/List.jsx';
-import List from './renderingLists/challenge1/App';
+// import List from './renderingLists/challenge1/App';
+import RecipeList from './renderingLists/challenge2/App';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <List />
+    <RecipeList />
+    {/* <List /> */}
 
     {/* <PeopleList /> */}
 
