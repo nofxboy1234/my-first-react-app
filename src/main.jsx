@@ -23,11 +23,15 @@ import './index.css';
 // import RecipeList from './renderingLists/challenge3/App';
 // import Poem from './renderingLists/challenge4/App';
 // import TodoList from './odinKeysInReact/TodoList';
-import MonthList from './odinKeysInReact/MonthList';
+// import MonthList from './odinKeysInReact/MonthList';
+import App from './passingData/App';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <MonthList />
+    <App />
+
+    {/* <MonthList /> */}
+
     {/* <TodoList /> */}
     {/* <Poem /> */}
     {/* <RecipeList /> */}
