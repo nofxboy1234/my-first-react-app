@@ -1,7 +1,14 @@
 import { getImageUrl } from './utils.js';
 import { v7 as uuid } from 'uuid';
 
-function Profile({ name, imageID, profession, awards, discovered }) {
+function Profile({
+  name,
+  imageID,
+  profession,
+  awards,
+  discovery,
+  imageSize = 70,
+}) {
   return (
     <section className="profile">
       <h2>{name}</h2>
@@ -9,8 +16,8 @@ function Profile({ name, imageID, profession, awards, discovered }) {
         className="avatar"
         src={getImageUrl(imageID)}
         alt={name}
-        width={70}
-        height={70}
+        width={imageSize}
+        height={imageSize}
       />
       <ul>
         <li>
@@ -22,7 +29,7 @@ function Profile({ name, imageID, profession, awards, discovered }) {
         </li>
         <li>
           <b>Discovered: </b>
-          {discovered}
+          {discovery}
         </li>
       </ul>
     </section>
@@ -42,7 +49,7 @@ export default function Gallery() {
         'Davy Medal',
         'Matteucci Medal',
       ],
-      discovered: 'polonium (chemical element)',
+      discovery: 'polonium (chemical element)',
     },
     {
       id: uuid(),
@@ -50,7 +57,7 @@ export default function Gallery() {
       imageID: 'YfeOqp2',
       profession: 'geochemist',
       awards: ['Miyake Prize for geochemistry', 'Tanaka Prize'],
-      discovered: 'a method for measuring carbon dioxide in seawater',
+      discovery: 'a method for measuring carbon dioxide in seawater',
     },
   ];
 
