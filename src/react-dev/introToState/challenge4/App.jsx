@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 export default function FeedbackForm() {
   function handleClick() {
     const name = prompt('What is your name?');
