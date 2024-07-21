@@ -5,9 +5,14 @@ const COLORS = ['pink', 'green', 'blue', 'yellow', 'purple'];
 
 function App() {
   const [backgroundColor, setBackgroundColor] = useState(COLORS[0]);
+  const [changedTimes, setChangedTimes] = useState(0);
 
   const onButtonClick = (color) => () => {
     setBackgroundColor(color);
+
+    if (color !== backgroundColor) {
+      setChangedTimes(changedTimes + 1);
+    }
   };
 
   return (
@@ -27,6 +32,7 @@ function App() {
           {color}
         </button>
       ))}
+      <div>Number of times changed: {changedTimes}</div>
     </div>
   );
 }

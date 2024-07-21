@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import FeedbackForm from './react-dev/introToState/challenge4/App';
+import App from './odin/introToState/App';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <FeedbackForm />
+    <App />
   </React.StrictMode>
 );
