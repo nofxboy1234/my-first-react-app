@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import TrafficLight from './react-dev/moreOnState/stateAsASnapshot/challenge1/TrafficLight';
+import Clock from './react-dev/choosingStateStructure/challenge1/Clock';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <TrafficLight />
+    <Clock />
   </React.StrictMode>
 );
