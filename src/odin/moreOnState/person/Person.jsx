@@ -5,7 +5,12 @@ function Person() {
 
   const handleIncreaseAge = () => {
     console.log('in handleIncreaseAge (before setPerson call): ', person);
-    setPerson({ ...person, age: person.age + 1 });
+    // setPerson({ ...person, age: person.age + 1 });
+    // setPerson({ ...person, age: person.age + 1 });
+
+    setPerson((prevPerson) => ({ ...prevPerson, age: prevPerson.age + 1 }));
+    setPerson((prevPerson) => ({ ...prevPerson, age: prevPerson.age + 1 }));
+
     // we've called setPerson, surely person has updated?
     console.log('in handleIncreaseAge (after setPerson call): ', person);
   };
