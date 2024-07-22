@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Clock from './react-dev/choosingStateStructure/challenge1/Clock';
+
+import App from './react-dev/choosingStateStructure/challenge2/App';
+import './react-dev/choosingStateStructure/challenge2/styles.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Clock />
+    <App />
   </React.StrictMode>
 );
