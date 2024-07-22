@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './odin/introToState/App';
+import Person from './odin/moreOnState/person/Person';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <Person />
   </React.StrictMode>
 );
