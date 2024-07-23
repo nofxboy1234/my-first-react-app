@@ -3,6 +3,7 @@ import { foods, filterItems } from './data.js';
 
 export default function FilterableList() {
   const [query, setQuery] = useState('');
+  const results = filterItems(foods, query);
 
   function handleChange(e) {
     setQuery(e.target.value);
@@ -10,17 +11,17 @@ export default function FilterableList() {
 
   return (
     <>
-      <SearchBar query={query} handleChange={handleChange} />
+      <SearchBar query={query} onChange={handleChange} />
       <hr />
-      <List items={filterItems(foods, query)} />
+      <List items={results} />
     </>
   );
 }
 
-function SearchBar({ query, handleChange }) {
+function SearchBar({ query, onChange }) {
   return (
     <label>
-      Search: <input value={query} onChange={handleChange} />
+      Search: <input value={query} onChange={onChange} />
     </label>
   );
 }
