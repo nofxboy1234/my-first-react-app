@@ -11,7 +11,7 @@ export default function MailClient() {
     let updatedSelectedIds;
 
     if (selectedIds.includes(toggledId)) {
-      updatedSelectedIds = selectedIds.filter((id) => id != toggledId);
+      updatedSelectedIds = selectedIds.filter((id) => id !== toggledId);
     } else {
       updatedSelectedIds = [...selectedIds, toggledId];
     }
@@ -27,10 +27,7 @@ export default function MailClient() {
           <Letter
             key={letter.id}
             letter={letter}
-            isSelected={
-              // TODO: allow multiple selection
-              selectedIds.includes(letter.id)
-            }
+            isSelected={selectedIds.includes(letter.id)}
             onToggle={handleToggle}
           />
         ))}
