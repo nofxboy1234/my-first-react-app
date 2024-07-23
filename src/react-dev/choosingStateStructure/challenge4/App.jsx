@@ -3,14 +3,20 @@ import { letters } from './data.js';
 import Letter from './Letter';
 
 export default function MailClient() {
-  const [selectedId, setSelectedId] = useState(null);
+  const [selectedIds, setSelectedIds] = useState([]);
 
-  // TODO: allow multiple selection
-  const selectedCount = 1;
+  const selectedCount = selectedIds.length;
 
   function handleToggle(toggledId) {
-    // TODO: allow multiple selection
-    setSelectedId(toggledId);
+    let updatedSelectedIds;
+
+    if (selectedIds.includes(toggledId)) {
+      updatedSelectedIds = selectedIds.filter((id) => id != toggledId);
+    } else {
+      updatedSelectedIds = [...selectedIds, toggledId];
+    }
+
+    setSelectedIds(updatedSelectedIds);
   }
 
   return (
@@ -23,7 +29,7 @@ export default function MailClient() {
             letter={letter}
             isSelected={
               // TODO: allow multiple selection
-              letter.id === selectedId
+              selectedIds.includes(letter.id)
             }
             onToggle={handleToggle}
           />
