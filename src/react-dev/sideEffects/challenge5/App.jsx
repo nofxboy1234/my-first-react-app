@@ -19,6 +19,7 @@ export default function Page() {
     console.log('Executing planets effect');
     let ignore = false;
     fetchData('/planets').then((result) => {
+      console.log(`planets ignore: ${ignore}`);
       if (!ignore) {
         console.log('Fetched a list of planets.');
         setPlanetList(result);
@@ -42,6 +43,7 @@ export default function Page() {
 
     let ignore = false;
     fetchData(`/planets/${planetId}/places`).then((result) => {
+      console.log(`places ignore: ${ignore}`);
       if (!ignore) {
         console.log(`Fetched a list of places on "${planetId}".`);
         setPlaceList(result);
