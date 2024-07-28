@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import App from './react-dev/sideEffects/challenge5/App';
 import './react-dev/sideEffects/challenge5/styles.css';
+import Parent from './react-dev/sideEffects/challenge5/Parent';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <Parent />
+  // <React.StrictMode>
+  // </React.StrictMode>
 );
