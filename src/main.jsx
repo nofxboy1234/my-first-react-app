@@ -5,7 +5,7 @@ import App from './react-dev/sideEffects/challenge5/App';
 import './react-dev/sideEffects/challenge5/styles.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <App />
+  // <React.StrictMode>
+  // </React.StrictMode>
 );
