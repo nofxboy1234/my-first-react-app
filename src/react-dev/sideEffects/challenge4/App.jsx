@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import ChatRoom from './ChatRoom';
-import { createEncryptedConnection, createUnencryptedConnection } from './chat';
 
 export default function App() {
   const [roomId, setRoomId] = useState('general');
@@ -24,12 +23,7 @@ export default function App() {
         Enable encryption
       </label>
       <hr />
-      <ChatRoom
-        roomId={roomId}
-        createConnection={
-          isEncrypted ? createEncryptedConnection : createUnencryptedConnection
-        }
-      />
+      <ChatRoom roomId={roomId} isEncrypted={isEncrypted} />
     </>
   );
 }
