@@ -23,13 +23,22 @@ export default function Page() {
   }, []);
 
   useEffect(() => {
-    if (planetId != '') {
-      fetchData(`/planets/${planetId}/places`).then((result) => {
-        console.log('Fetched a list of places');
-        setPlaceList(result);
-        setPlaceId(result[0].id);
-      });
+    if (planetId === '') {
+      // Nothing is selected in the first box yet
+      return;
     }
+
+    let ignore = false;
+    fetchData(`/planets/${planetId}/places`).then((result) => {
+      if (!ignore) {
+        console.log(`Fetched a list of places on "${planetId}".`);
+        setPlaceList(result);
+        setPlaceId(result[0].id); // Select the first place
+      }
+    });
+    return () => {
+      ignore = true;
+    };
   }, [planetId]);
 
   return (
