@@ -10,13 +10,23 @@ export default function Page() {
 
   useEffect(() => {
     let ignore = false;
-    fetchData('/planets').then((result) => {
-      if (!ignore) {
-        console.log('Fetched a list of planets.');
-        setPlanetList(result);
-        setPlanetId(result[0].id); // Select the first planet
-      }
-    });
+    fetchData('/planets')
+      .then((result) => {
+        if (!ignore) {
+          console.log('Fetched a list of planets.');
+          setPlanetList(result);
+          setPlanetId(result[0].id); // Select the first planet
+        }
+        return result[0].id;
+      })
+      .then((result) => {
+        return fetchData(`/planets/${result}/places`);
+      })
+      .then((result) => {
+        console.log('Fetched a list of places');
+        setPlaceList(result);
+        setPlaceId(result[0].id);
+      });
     return () => {
       ignore = true;
     };
