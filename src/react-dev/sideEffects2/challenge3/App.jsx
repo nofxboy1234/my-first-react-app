@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import ContactList from './ContactList.js';
-import EditContact from './EditContact.js';
+import ContactList from './ContactList.jsx';
+import EditContact from './EditContact.jsx';
 
 export default function ContactManager() {
   const [contacts, setContacts] = useState(initialContacts);
