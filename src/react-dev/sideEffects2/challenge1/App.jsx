@@ -4,7 +4,6 @@ import { initialTodos, createTodo } from './todos';
 export default function TodoList() {
   const [todos, setTodos] = useState(initialTodos);
   const [showActive, setShowActive] = useState(false);
-
   const activeTodos = todos.filter((todo) => !todo.completed);
   const visibleTodos = showActive ? activeTodos : todos;
 
