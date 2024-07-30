@@ -1,17 +1,18 @@
-import { useEffect, useState } from 'react';
+import { useRef, useState } from 'react';
 
 export default function CountInputChanges() {
   const [value, setValue] = useState('');
-  const [count, setCount] = useState(-1);
+  const countRef = useRef(0);
 
-  useEffect(() => setCount(count + 1), [value]);
-
-  const onChange = ({ target }) => setValue(target.value);
+  const onChange = ({ target }) => {
+    setValue(target.value);
+    countRef.current++;
+  };
 
   return (
     <div>
       <input type="text" value={value} onChange={onChange} />
-      <div>Number of changes: {count}</div>
+      <div>Number of changes: {countRef.current}</div>
     </div>
   );
 }
