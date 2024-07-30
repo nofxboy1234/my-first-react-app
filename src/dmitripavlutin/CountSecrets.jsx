@@ -7,7 +7,7 @@ export default function CountSecrets() {
     if (secret.value === 'secret') {
       setSecret((s) => ({ ...s, countSecrets: s.countSecrets + 1 }));
     }
-  }, [secret]);
+  }, [secret.value]);
 
   const onChange = ({ target }) => {
     setSecret((s) => ({ ...s, value: target.value }));
