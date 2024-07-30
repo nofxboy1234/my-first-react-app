@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import App from './react-dev/sideEffects2/challenge4/App';
-import './react-dev/sideEffects2/challenge4/styles.css';
+import App from './dmitripavlutin/CountInputChanges';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
