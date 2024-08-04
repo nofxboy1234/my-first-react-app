@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const FunctionalInput = ({ name }) => {
+const FunctionalInput = ({ name, title }) => {
   const [todos, setTodos] = useState(['Just some demo tasks', 'As an example']);
   const [inputVal, setInputVal] = useState('');
 
@@ -17,6 +17,7 @@ const FunctionalInput = ({ name }) => {
   return (
     <section>
       <h3>{name}</h3>
+      <h3>{title}</h3>
       <form onSubmit={handleSubmit}>
         <label htmlFor="task-entry">Enter a task: </label>
         <input
