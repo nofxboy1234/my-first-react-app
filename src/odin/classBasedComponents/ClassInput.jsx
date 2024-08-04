@@ -1,12 +1,17 @@
 import { Component } from 'react';
 import Count from './Count';
 
+let nextId = 3;
+
 class ClassInput extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      todos: ['Just some demo tasks', 'As an example'],
+      todos: [
+        { id: 1, title: 'Just some demo tasks', isEditing: false },
+        { id: 2, title: 'As an example', isEditing: false },
+      ],
       inputVal: '',
     };
 
@@ -25,7 +30,11 @@ class ClassInput extends Component {
   handleSubmit(e) {
     e.preventDefault();
     this.setState((state) => ({
-      todos: state.todos.concat(state.inputVal),
+      todos: state.todos.concat({
+        id: nextId++,
+        title: state.inputVal,
+        isEditing: false,
+      }),
       inputVal: '',
     }));
   }
@@ -55,9 +64,71 @@ class ClassInput extends Component {
         <Count count={this.state.todos.length} />
         <ul>
           {this.state.todos.map((todo) => (
-            <li key={todo}>
-              {todo}{' '}
+            <li key={todo.id}>
+              {console.log(`todo id: ${todo.id}`)}
+              {todo.isEditing ? (
+                <input
+                  type="text"
+                  name="task-edit"
+                  value={todo.title}
+                  onChange={(e) => {
+                    this.setState((state) => {
+                      return {
+                        ...state,
+                        todos: state.todos.map((existingTodo) => {
+                          if (existingTodo.id === todo.id) {
+                            return {
+                              ...todo,
+                              title: e.target.value,
+                            };
+                          } else {
+                            return existingTodo;
+                          }
+                        }),
+                      };
+                    });
+                  }}
+                />
+              ) : (
+                todo.title + ' '
+              )}
               <button onClick={() => this.deleteTodo(todo)}>Delete</button>
+              <button
+                onClick={() => {
+                  if (todo.isEditing) {
+                    this.setState((state) => {
+                      return {
+                        ...state,
+                        todos: state.todos.map((existingTodo) => {
+                          if (existingTodo.id === todo.id) {
+                            return {
+                              ...todo,
+                              isEditing: false,
+                            };
+                          } else {
+                            return existingTodo;
+                          }
+                        }),
+                      };
+                    });
+                  } else {
+                    this.setState((state) => {
+                      return {
+                        ...state,
+                        todos: state.todos.map((existingTodo) => {
+                          if (existingTodo.id === todo.id) {
+                            return { ...todo, isEditing: true };
+                          } else {
+                            return existingTodo;
+                          }
+                        }),
+                      };
+                    });
+                  }
+                }}
+              >
+                {todo.isEditing ? 'Resubmit' : 'Edit'}
+              </button>
             </li>
           ))}
         </ul>
