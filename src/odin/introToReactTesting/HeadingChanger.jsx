@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 
-const App = () => {
+const HeadingChanger = () => {
   const [heading, setHeading] = useState('Magnificent Monkeys');
 
   const clickHandler = () => {
@@ -19,4 +19,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default HeadingChanger;
