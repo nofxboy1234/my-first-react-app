@@ -1,6 +1,6 @@
-import App from './odin/reactRouter/profile/App';
-import Profile from './odin/reactRouter/profile/Profile';
-import ErrorPage from './odin/reactRouter/profile/ErrorPage';
+import App from './App';
+import Profile from './Profile';
+import ErrorPage from './ErrorPage';
 
 const routes = [
   {
