@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 const Image = () => {
   const [imageURL, setImageURL] = useState(null);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     console.log('fetch');
@@ -16,11 +17,13 @@ const Image = () => {
         return response.json();
       })
       .then((data) => setImageURL(data[0].url))
-      .catch((error) => setError(error));
+      .catch((error) => setError(error))
+      .finally(() => setLoading(false));
   }, []);
 
   console.log('render');
 
+  if (loading) return <p>Loading...</p>;
   if (error) return <p>A network error was encountered</p>;
 
   return (
