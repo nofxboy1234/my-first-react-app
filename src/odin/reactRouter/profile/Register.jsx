@@ -16,7 +16,7 @@ const Register = () => {
     <>
       {registered && <Navigate to="/" replace={true} />}
       <form onSubmit={register}>
-        <input type="text" value={name} onChange={setName} />
+        <input type="text" value={name} name="name" onChange={setName} />
         <button type="submit">Register</button>
       </form>
     </>
