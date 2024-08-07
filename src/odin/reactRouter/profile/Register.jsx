@@ -1,8 +1,10 @@
 import { useState } from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useSearchParams } from 'react-router-dom';
 
 const Register = () => {
   const [registered, setRegistered] = useState(false);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [name, setName] = useState(searchParams.get('name') || '');
 
   function register(e) {
     e.preventDefault();
@@ -14,7 +16,7 @@ const Register = () => {
     <>
       {registered && <Navigate to="/" replace={true} />}
       <form onSubmit={register}>
-        <input type="text" />
+        <input type="text" value={name} onChange={setName} />
         <button type="submit">Register</button>
       </form>
     </>
