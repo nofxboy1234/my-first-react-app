@@ -3,6 +3,7 @@
 }
 
 .dylan2 {
+  composes: bye from global;
   color: blue;
 }
 
