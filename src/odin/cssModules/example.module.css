@@ -11,7 +11,11 @@
   background: red;
 }
 
+.className2 {
+  border: 1px solid black;
+}
+
 .otherClassName {
-  composes: className;
+  composes: className className2;
   color: yellow;
 }
