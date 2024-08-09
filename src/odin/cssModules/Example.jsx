@@ -16,6 +16,7 @@ const Example = () => {
         Example using composed css selectors
       </div>
       <div id={classes.cat}>Cat</div>
+      <p>dog</p>
     </>
   );
 };
