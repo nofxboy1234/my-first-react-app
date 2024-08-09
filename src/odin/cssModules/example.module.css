@@ -17,5 +17,6 @@
 
 .otherClassName {
   composes: className className2;
+  composes: hello from './hello.module.css';
   color: yellow;
 }
