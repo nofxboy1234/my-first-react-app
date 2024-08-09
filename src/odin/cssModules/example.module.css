@@ -21,3 +21,7 @@
   composes: hello from './hello.module.css';
   color: yellow;
 }
+
+#cat {
+  background-color: yellowgreen;
+}

@@ -15,6 +15,7 @@ const Example = () => {
       <div className={classes.otherClassName}>
         Example using composed css selectors
       </div>
+      <div id={classes.cat}>Cat</div>
     </>
   );
 };
