@@ -7,7 +7,7 @@ Object.assign(styles, fancyButton, demo);
 
 const Demo = () => {
   const [count, setCount] = useState(0);
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState(['user1']);
 
   return (
     <>
@@ -24,9 +24,11 @@ const Demo = () => {
 
       <br />
 
-      <div>Users: {users}</div>
       <button onClick={() => setUsers([...users, 'user'])}>Add user</button>
       <button onClick={() => setUsers(users)}>Set Users to same value</button>
+      {users.map((user, index) => (
+        <div key={index}>{user}</div>
+      ))}
     </>
   );
 };
