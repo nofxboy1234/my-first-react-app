@@ -7,17 +7,26 @@ Object.assign(styles, fancyButton, demo);
 
 const Demo = () => {
   const [count, setCount] = useState(0);
+  const [users, setUsers] = useState([]);
 
   return (
     <>
       <div className={styles.demo}>Demo</div>
       <div className={styles.fancyButton}>Demo</div>
+
       <br />
+
       <div>Count: {count}</div>
       <button onClick={() => setCount(count + 1)}>Increment Count</button>
       <button onClick={() => setCount(count)}>
         Set Count to the same value
       </button>
+
+      <br />
+
+      <div>Users: {users}</div>
+      <button onClick={() => setUsers([...users, 'user'])}>Add user</button>
+      <button onClick={() => setUsers(users)}>Set Users to same value</button>
     </>
   );
 };
