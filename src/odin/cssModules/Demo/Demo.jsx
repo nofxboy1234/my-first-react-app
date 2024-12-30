@@ -2,19 +2,22 @@ let styles = {};
 import demo from './Demo.module.css';
 import fancyButton from './css-fancy-button.module.css';
 import { useState } from 'react';
+import UserList from './UserList';
 
 Object.assign(styles, fancyButton, demo);
 
 const Demo = () => {
   const [count, setCount] = useState(0);
-  const [users, setUsers] = useState(['user1']);
+  const [greeting, setGreeting] = useState('hello');
+
+  console.log('render Demo');
 
   return (
     <>
       <div className={styles.demo}>Demo</div>
       <div className={styles.fancyButton}>Demo</div>
 
-      <br />
+      <hr />
 
       <div>Count: {count}</div>
       <button onClick={() => setCount(count + 1)}>Increment Count</button>
@@ -22,13 +25,9 @@ const Demo = () => {
         Set Count to the same value
       </button>
 
-      <br />
+      <hr />
 
-      <button onClick={() => setUsers([...users, 'user'])}>Add user</button>
-      <button onClick={() => setUsers(users)}>Set Users to same value</button>
-      {users.map((user, index) => (
-        <div key={index}>{user}</div>
-      ))}
+      <UserList greeting={greeting} />
     </>
   );
 };
