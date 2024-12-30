@@ -8,7 +8,6 @@ Object.assign(styles, fancyButton, demo);
 
 const Demo = () => {
   const [count, setCount] = useState(0);
-  const [greeting, setGreeting] = useState('hello');
 
   console.log('render Demo');
 
@@ -27,7 +26,8 @@ const Demo = () => {
 
       <hr />
 
-      <UserList greeting={greeting} />
+      <UserList count={count} />
+      {/* {count % 3 === 0 ? <UserList count={count} /> : undefined} */}
     </>
   );
 };

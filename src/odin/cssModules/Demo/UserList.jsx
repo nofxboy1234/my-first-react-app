@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-const UserList = ({ greeting }) => {
+const UserList = ({ count }) => {
   const [users, setUsers] = useState(['user1']);
 
   useEffect(() => {
     console.log('UserList effect');
-  });
+
+    return () => console.log('UserList cleanup');
+  }, [count]);
 
   console.log('render UserList');
 
