@@ -20,7 +20,12 @@ const Demo = () => {
 
       <div>Count: {count}</div>
       <button onClick={() => setCount(count + 1)}>Increment Count</button>
-      <button onClick={() => setCount(count)}>
+      <button
+        onClick={() => {
+          console.log('Set count to', count);
+          setCount(count);
+        }}
+      >
         Set Count to the same value
       </button>
 
